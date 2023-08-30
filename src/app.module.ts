@@ -4,6 +4,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ConfigModule } from '@nestjs/config';
 import { AllExceptionFilter } from './shared/common/httpExceptionFiler';
+import { UsersModule } from './shared/users/users.module';
 
 @Module({
   imports: [
@@ -11,6 +12,7 @@ import { AllExceptionFilter } from './shared/common/httpExceptionFiler';
       isGlobal: true,
     }),
     MongooseModule.forRoot(process.env.MONGO_CONNECT),
+    UsersModule,
   ],
   controllers: [AppController],
   providers: [
