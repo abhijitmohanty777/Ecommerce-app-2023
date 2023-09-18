@@ -28,7 +28,7 @@ export class UsersController {
   ) {
     const loginResponse = await this.usersService.getLogin(loginUserDto);
     // if(loginResponse.success){
-    //   response.cookie('_abhi_cart_auth_token', loginResponse.result?.token, {httpOnly:true} )
+    //   response.cookie('_abhi_cart_auth_token', loginResponse.result?.token, {httpOnly:true});
     // }
     // delete loginResponse.result?.token;
     return loginResponse;

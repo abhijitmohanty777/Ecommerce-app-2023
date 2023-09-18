@@ -10,4 +10,8 @@ export class UsersRepository {
     @InjectModel(USERS)
     private readonly UserModel: Model<UsersInterface>,
   ) {}
+
+  async getUsersDetailsByEmailId(){
+    return "getUsersDetailsByEmailId"
+  }
 }
